@@ -30,7 +30,7 @@ export const appointmentsMock: Appointment[] = [
     date: '22/07/2020, 2:30 PM',
     status: '',
     doctor: {
-      photo: 'user',
+      photo: 'https://randomuser.me/api/portraits/thumb/women/95.jpg',
       name: 'dr Anthony Wagner',
       specialty: 'dermatologist'
     }
@@ -40,7 +40,7 @@ export const appointmentsMock: Appointment[] = [
     date: '25/07/2020, 4:30 PM',
     status: '',
     doctor: {
-      photo: 'user',
+      photo: 'https://randomuser.me/api/portraits/thumb/women/95.jpg',
       name: 'dr Mike Brown',
       specialty: 'dentist'
     }

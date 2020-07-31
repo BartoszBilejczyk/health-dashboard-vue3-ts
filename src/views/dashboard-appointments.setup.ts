@@ -39,7 +39,7 @@ export function useAppointments(notifications: NotificationsReturnData) : Appoin
         date,
         status: '',
         doctor: {
-          photo: 'user',
+          photo: 'https://randomuser.me/api/portraits/thumb/women/95.jpg',
           name,
           specialty
         }
