@@ -1,12 +1,12 @@
 <template>
   <div id="app" class="app">
     <Suspense>
-      <template #default>
+      <div class="app__content">
         <AppNav class="app__nav"></AppNav>
         <main class="app__main">
           <router-view class="app__router-view"/>
         </main>
-      </template>
+      </div>
       <template #fallback>
         <div class="app__loading">Loading...</div>
       </template>
@@ -34,6 +34,10 @@
     min-height: 100vh;
     display: flex;
     background: $color-primary-background--light;
+
+    &__content {
+      display: flex;
+    }
 
     &__nav {
       width: 100px;

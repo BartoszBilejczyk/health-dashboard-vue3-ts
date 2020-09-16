@@ -18,16 +18,16 @@
     <div class="dashboard__upper">
       <BaseBox title="Upcoming appointments">
         <DashboardAppointments
-          :data="appointments.list"
+          :data="appointments.list.value"
           @confirm="appointments.handleChangeAppointmentStatus($event, 'confirmed')"
           @reject="appointments.handleChangeAppointmentStatus($event, 'rejected')"
         ></DashboardAppointments>
       </BaseBox>
       <BaseBox title="Recent results">
         <DashboardResults
-          :data="results.currentResultsData"
-          :month="results.month"
-          :type="results.type"
+          :data="results.currentResultsData.value"
+          :month="results.month.value"
+          :type="results.type.value"
           @change-month="results.handleChangeMonth"
           @change-type="results.handleChangeType"
         ></DashboardResults>
@@ -36,16 +36,16 @@
     <div class="dashboard__lower">
       <BaseBox title="News">
         <DashboardNews
-          :data="news.list"
+          :data="news.list.value"
           @open="news.handleOpenNewsModal"
         />
       </BaseBox>
       <BaseBox title="Current prescriptions">
-        <DashboardPrescriptions :data="prescriptions.list" />
+        <DashboardPrescriptions :data="prescriptions.list.value" />
       </BaseBox>
       <BaseBox title="Notifications">
         <DashboardNotifications
-          :data="notifications.list"
+          :data="notifications.list.value"
           @dismiss="notifications.handleNotificationsDismissal"
         />
       </BaseBox>
@@ -56,13 +56,13 @@
 <script lang="ts">
   import { defineComponent } from 'vue';
 
-  import BaseBox from '../components/common/BaseBox';
-  import DashboardAppointments from '../components/dashboard/DashboardAppointments';
-  import DashboardNews from '../components/dashboard/DashboardNews';
-  import DashboardPrescriptions from '../components/dashboard/DashboardPrescriptions';
-  import DashboardNotifications from '../components/dashboard/DashboardNotifications';
-  import DashboardResults from '../components/dashboard/DashboardResults';
-  import DashboardNewsModal from '../components/dashboard/DashboardNewsModal';
+  import BaseBox from '@/components/common/BaseBox';
+  import DashboardAppointments from '@/components/dashboard/DashboardAppointments';
+  import DashboardNews from '@/components/dashboard/DashboardNews';
+  import DashboardPrescriptions from '@/components/dashboard/DashboardPrescriptions';
+  import DashboardNotifications from '@/components/dashboard/DashboardNotifications';
+  import DashboardResults from '@/components/dashboard/DashboardResults';
+  import DashboardNewsModal from '@/components/dashboard/DashboardNewsModal';
   import AppHeader from '@/components/AppHeader.vue';
 
   import { useAppointments } from '@/views/dashboard-appointments.setup';
